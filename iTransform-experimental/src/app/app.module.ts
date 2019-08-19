@@ -16,7 +16,8 @@ import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,8 +29,6 @@ import { AdminModule } from './admin/admin.module';
     ReactiveFormsModule,
     WelcomeCourseModule,
     AdminModule,
-
-
     RouterModule.forRoot(appRoute),
   ],
   providers: [],

@@ -103,35 +103,23 @@ export class AdminNewCourseComponent implements OnInit {
 
     addCourseGroup(): FormGroup {
         return this.fb.group({
-            courseId: ['', Validators.required],
+
             courseName: ['', Validators.required],
             courseImage: ['', Validators.required],
-            chapterName: ['', Validators.required],
-            chapterModule : ['' , Validators.required],
-            moduleId:['',Validators.required],
-            moduleName: ['', Validators.required],
-            title: ['', Validators.required],
-            description: ['', Validators.required],
-            codesnippet: ['', Validators.required],
-            subdescription :['',Validators.required],
-            subtitle:['',Validators.required],
-            moduleImage:['',Validators.required],
-            youtubelink : ['',Validators.required],
-            chapterId : ['',Validators.required],
-            question:['',Validators.required],
-            option1 : ['',Validators.required],
-            option2:['',Validators.required],
-            option3:['',Validators.required],
-            option4:['',Validators.required],
-            answer:['',Validators.required]
+
 
         })
     }
 
     addCourses() {
 
-        this.courseArray.push(this.addCourseGroup());
+        this.adminService.addNewCourse(this.course).subscribe(
 
+            () => this.router.navigate(['/addchapter'])
+        );
+
+
+        console.log(this.course)
         alert('new')
 
     }
@@ -190,7 +178,7 @@ export class AdminNewCourseComponent implements OnInit {
         alert("done")
     }
 
-    get courseArray() { return <FormArray> this.adminWelcomeForm.get("course") }
+    get courseArray() { return <FormArray>this.adminWelcomeForm.get("course") }
 
 
 }

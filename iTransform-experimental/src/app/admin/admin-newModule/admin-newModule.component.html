@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div id="addmodule-page">
         <div class="form-box">
-            <form>
+            <form [formGroup]="adminModuleForm" >
 
                 <div class="col-xs-12">
                     <div class="col-md-12">
@@ -9,12 +9,12 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="title">Title</label>
                             <div class="input-group control-group after-add-more">
-                                <input type="text" class="form-control title" placeholder="Title" name="title"
+                                <input type="text" class="form-control title" placeholder="Title" formControlName="Title"
                                     id="tilte">
                             </div>
-                            <div class="text-danger"
+                            <!-- <div class="text-danger"
                                 [class.d-none]="group.controls.title.valid || group.controls.title.untouched">
-                                Title is required</div>
+                                Title is required</div> -->
 
                         </div>
 
@@ -24,9 +24,9 @@
                                 <input type="text" class="form-control description" placeholder="Description"
                                     name="description" id="description">
                             </div>
-                            <div class="text-danger"
+                            <!-- <div class="text-danger"
                                 [class.d-none]="group.controls.description.valid || group.controls.description.untouched">
-                                Description is required</div>
+                                Description is required</div> -->
 
                         </div>
 
@@ -36,9 +36,9 @@
                                 <input type="text" class="form-control subtitle" placeholder="Sub Title" name="subtitle"
                                     id="subtitle">
                             </div>
-                            <div class="text-danger"
+                            <!-- <div class="text-danger"
                                 [class.d-none]="group.controls.subtitle.valid || group.controls.subtitle.untouched">
-                                Sub Title is required</div>
+                                Sub Title is required</div> -->
 
                         </div>
 
@@ -48,9 +48,9 @@
                                 <input type="text" class="form-control subdescription" placeholder="Sub Description"
                                     name="subdescription" id="subdescription">
                             </div>
-                            <div class="text-danger"
+                            <!-- <div class="text-danger"
                                 [class.d-none]="group.controls.subdescription.valid || group.controls.subdescription.untouched">
-                                Sub Description is required</div>
+                                Sub Description is required</div> -->
 
                         </div>
 
@@ -60,9 +60,9 @@
                                 <input type="text" class="form-control codesnippet" placeholder="code snippet"
                                     name="codesnippet" id="codesnippet">
                             </div>
-                            <div class="text-danger"
+                            <!-- <div class="text-danger"
                                 [class.d-none]="group.controls.codesnippet.valid || group.controls.codesnippet.untouched">
-                                code Snippet is required</div>
+                                code Snippet is required</div> -->
 
                         </div>
 
@@ -72,9 +72,9 @@
                                 <input type="text" class="form-control youtubelink" placeholder="Youtubelink"
                                     name="youtubelink" id="youtubelink">
                             </div>
-                            <div class="text-danger"
+                            <!-- <div class="text-danger"
                                 [class.d-none]="group.controls.youtubelink.valid || group.controls.youtubelink.untouched">
-                                Youtubelink is required</div>
+                                Youtubelink is required</div> -->
 
                         </div>
 
@@ -83,8 +83,8 @@
                 </div>
                 <!-- Button -->
 
-                <input type="submit" class="btn btn-social" value="Submit" />
-                <a routerLink="/addchapter"></a>
+                <input type="submit" class="btn btn-social" value="Submit" (click)="addNewModule()" />
+
             </form>
         </div>
     </div>

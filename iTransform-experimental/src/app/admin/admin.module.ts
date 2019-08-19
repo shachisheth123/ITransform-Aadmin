@@ -12,6 +12,7 @@ import { AdminWelcomeComponent } from './admin-welcome/admin-welcome.component';
 import { AdminNewCourseComponent } from './admin-newcourse/admin-newcourse.component';
 import { AdminNewChapterComponent } from './admin-newChapter/admin-newChapter.component';
 import {  AdminNewModuleComponent } from './admin-newModule/admin-newModule.component';
+import { AdminComponent } from './admin.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {  AdminNewModuleComponent } from './admin-newModule/admin-newModule.comp
     AdminWelcomeComponent,
     AdminNewCourseComponent,
     AdminNewChapterComponent,
-    AdminNewModuleComponent
+    AdminNewModuleComponent,
+    AdminComponent
 
   ],
   imports: [
@@ -40,7 +42,8 @@ import {  AdminNewModuleComponent } from './admin-newModule/admin-newModule.comp
     AdminWelcomeComponent,
     AdminNewCourseComponent,
     AdminNewChapterComponent,
-    AdminNewModuleComponent
+    AdminNewModuleComponent,
+    AdminComponent
 
   ]
 })

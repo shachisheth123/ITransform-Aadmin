@@ -77,7 +77,7 @@
                 <!-- [class.is-invalid]="group.controls.courseName.touched && group.controls.courseName.invalid"  required -->
                 <!-- (click)="action('item 1') -->
                 <!--multiple repeatetion of course-->
-                <div class="col-xs-12" formArrayName="course">
+                <div class="col-xs-12" >
                     <div class="col-md-12" *ngFor="let group of courseArray.controls; let i=index" [formGroupName]="i">
 
                         <div class="form-group">
@@ -89,15 +89,15 @@
                                             <dropdown-item (click)="action('item 2')">Ruby</dropdown-item>
                                             <dropdown-item (click)="action('item 2')">python</dropdown-item>
                                         <dropdown> -->
-                                <select name="coursename">
+                                <select name="courseName">
                                     <option value="Java">Java</option>
                                     <option value=".net">.Net</option>
                                     <option value="c">C</option>
                                     <option value="python">Python</option>
                                 </select>
-                                <div class="text-danger"
+                                <!-- <div class="text-danger"
                                     [class.d-none]="group.controls.courseName.valid || group.controls.courseName.untouched">
-                                    Course Name is required</div>
+                                    Course Name is required</div> -->
                             </div>
                         </div>
                         <div class="form-group">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <!-- Button -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <div class="col-md-4">
                         <button id="add-more" name="add-more" (click)="addCourses()" class="btn btn-primary"
                             [disabled]="adminWelcomeForm.get('course').invalid">Add More</button>
@@ -121,8 +121,9 @@
                         <button id="remove" name="remove" (click)="removeCourses()"
                             class="btn btn-primary">Remove</button>
                     </div>
-                </div>
-                <input type="submit" class="btn btn-social" (click)="submitHandler()" value="Submit" />
+                </div> -->
+                <input type="submit" routerLink="/addchapter" class="btn btn-social" (click)="addCourses()"
+                    value="Submit" />
             </form>
         </div>
     </div>

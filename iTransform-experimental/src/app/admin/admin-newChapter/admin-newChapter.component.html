@@ -7,28 +7,21 @@
                     <div class="col-md-12">
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="chapterName">Chapter Name</label>
-                            <div class="input-group control-group after-add-more">
-                                <input type="text" formControlName="chapterName" class="form-control box1"
-                                    placeholder="Chapter Name" name="chaptername" id="chapterName"
-                                    [class.is-invalid]="chapterName.touched && chapterName.invalid" required />
-                            </div>
-                            <div class="text-danger"
-                                [class.d-none]="group.controls.chapterName.valid || group.controls.chapterName.untouched">
-                                Chapter Name is required</div>
-
+                                <label class="col-md-4 control-label" for="chapterName">Chapter Name</label>
+                            <input type="text" formControlName="chapterName" class="form-control box1"
+                                placeholder="Chapter Name" id="chapterName" name="chapterName"
+                                [class.is-invalid]="chapterName.touched && chapterName.invalid" required />
+                            <!-- <div class="text-danger" [class.d-none]="chapterName.valid || chapterName.untouched">Chapter
+                                Name is required</div> -->
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="moduleName">Module Name</label>
-                            <div class="input-group control-group after-add-more">
-                                <input type="text" class="form-control box1" formControlName="moduleName"
-                                    placeholder="Module Name" name="moduleName" id="moduleName">
-                            </div>
-                            <div class="text-danger"
-                                [class.d-none]="group.controls.moduleName.valid || group.controls.moduleName.untouched">
-                                Module Name is required</div>
-
+                                <label class="col-md-4 control-label" for="moduleName">Module Name</label>
+                            <input type="text" formControlName="moduleName" class="form-control box1"
+                                placeholder="Module Name" id="moduleName" name="moduleName"
+                                [class.is-invalid]="moduleName.touched && moduleName.invalid" required />
+                            <!-- <div class="text-danger" [class.d-none]="moduleName.valid || moduleName.untouched">Module
+                                Name is required</div> -->
                         </div>
 
 
@@ -36,8 +29,9 @@
                 </div>
                 <!-- Button -->
 
-                <input type="submit" class="btn btn-primary" value="Submit" />
-                <a routerLink="/addchapter"></a>
+                <input type="submit" routerLink="/addmodule" class="btn btn-primary" (click)="addNewChapter()"
+                    value="Submit" />
+
             </form>
 
         </div>
